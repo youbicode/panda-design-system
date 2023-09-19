@@ -1,6 +1,6 @@
 import { PropsWithChildren } from 'react'
 import { css } from '@ui/styled-system/css'
-import type { SystemStyleObject } from '../../styled-system/types'
+import type { SystemStyleObject } from '@ui/styled-system/types'
 
 type Props = PropsWithChildren<{
   css: SystemStyleObject
