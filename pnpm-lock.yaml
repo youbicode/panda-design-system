@@ -105,6 +105,9 @@ importers:
       typescript:
         specifier: 5.2.2
         version: 5.2.2
+      ui:
+        specifier: workspace:*
+        version: link:../../packages/ui
     devDependencies:
       '@pandacss/dev':
         specifier: ^0.15.0

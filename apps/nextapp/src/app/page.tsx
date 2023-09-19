@@ -1,6 +1,6 @@
 import { TestComponent } from '@/components/TestComponent'
 import { css } from '../../styled-system/css'
-
+import { Button } from 'ui'
 const styles = css({
   fontSize: '2xl',
   fontWeight: 'bold',
@@ -19,6 +19,8 @@ export default function Home() {
       <TestComponent css={{ color: 'red.600', _hover: { color: 'red.900' } }}>
         Test
       </TestComponent>
+      <p>3. external component</p>
+      <Button>Test</Button>
     </main>
   )
 }
