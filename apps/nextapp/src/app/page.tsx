@@ -1,5 +1,5 @@
 import { TestComponent } from '@/components/TestComponent'
-import { css } from '../../styled-system/css'
+import { css } from '@ui/styled-system/css'
 import { Button, Badge } from '@ui/design-system'
 const styles = css({
   fontSize: '2xl',
