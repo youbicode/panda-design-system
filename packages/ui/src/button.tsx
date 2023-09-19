@@ -6,7 +6,7 @@ export type ButtonProps = React.PropsWithChildren<{ className?: string }>
 export function Button({ children }: ButtonProps): JSX.Element {
   return (
     <button
-      className={css({ color: 'red.900', px: '2', py: '3' })}
+      className={css({ color: 'red.600', px: '2', py: '3' })}
       type="button"
     >
       {children}
