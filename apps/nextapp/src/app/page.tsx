@@ -1,6 +1,6 @@
 import { TestComponent } from '@/components/TestComponent'
 import { css } from '../../styled-system/css'
-import { Button } from '@ui/design-system'
+import { Button, Badge } from '@ui/design-system'
 const styles = css({
   fontSize: '2xl',
   fontWeight: 'bold',
@@ -21,6 +21,8 @@ export default function Home() {
       </TestComponent>
       <p>3. external component</p>
       <Button>another one</Button>
+      <p>4. external component with cva</p>
+      <Badge>badge</Badge>
     </main>
   )
 }
