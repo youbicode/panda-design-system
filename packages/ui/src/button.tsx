@@ -1,13 +1,14 @@
 import * as React from 'react'
+import { css } from '@ui/styled-system/css'
 
-export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  children: React.ReactNode
-}
+export type ButtonProps = React.PropsWithChildren<{ className?: string }>
 
-export function Button({ children, ...other }: ButtonProps): JSX.Element {
+export function Button({ children }: ButtonProps): JSX.Element {
   return (
-    <button type="button" {...other}>
+    <button
+      className={css({ color: 'red.900', px: '2', py: '3' })}
+      type="button"
+    >
       {children}
     </button>
   )

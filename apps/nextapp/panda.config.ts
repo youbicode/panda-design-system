@@ -17,6 +17,9 @@ export default defineConfig({
   include: [
     './src/components/**/*.{ts,tsx,js,jsx}',
     './src/app/**/*.{ts,tsx,js,jsx}',
+
+    // external
+    './node_modules/@ui/design-system/src/**/*.tsx',
   ],
 
   // Files to exclude
@@ -31,5 +34,5 @@ export default defineConfig({
   strictTokens: true,
 
   // The output directory for your css system
-  outdir: 'styled-system',
+  outdir: '@ui/styled-system',
 })

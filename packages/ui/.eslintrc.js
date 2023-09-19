@@ -1,3 +1,6 @@
 module.exports = {
-  extends: ["custom/react"],
-};
+  extends: ['custom/react'],
+  rules: {
+    'import/no-extraneous-dependencies': 0,
+  },
+}

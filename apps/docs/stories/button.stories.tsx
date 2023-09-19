@@ -1,19 +1,14 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { Button } from "ui";
+import type { Meta, StoryObj } from '@storybook/react'
+import { Button } from '@ui/design-system'
 
 const meta: Meta<typeof Button> = {
+  title: 'Design System/Button',
   component: Button,
-  argTypes: {
-    type: {
-      control: { type: "radio" },
-      options: ["button", "submit", "reset"],
-    },
-  },
-};
+}
 
-export default meta;
+export default meta
 
-type Story = StoryObj<typeof Button>;
+type Story = StoryObj<typeof Button>
 
 /*
  *👇 Render functions are a framework specific feature to allow you control on how the component renders.
@@ -21,26 +16,9 @@ type Story = StoryObj<typeof Button>;
  * to learn how to use render functions.
  */
 export const Primary: Story = {
-  render: (props) => (
-    <Button
-      {...props}
-      onClick={(): void => {
-        // eslint-disable-next-line no-alert -- alert for demo
-        alert("Hello from Turborepo!");
-      }}
-    >
-      Hello
-    </Button>
-  ),
-  name: "Button",
+  render: () => <Button>Hello</Button>,
+  name: 'Button',
   args: {
-    children: "Hello",
-    type: "button",
-    style: {
-      color: "blue",
-      border: "1px solid gray",
-      padding: 10,
-      borderRadius: 10,
-    },
+    children: 'Hello',
   },
-};
+}

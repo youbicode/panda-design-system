@@ -1,5 +1,5 @@
 {
-  "name": "ui",
+  "name": "@ui/design-system",
   "version": "0.0.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -7,11 +7,20 @@
   "sideEffects": false,
   "license": "MIT",
   "files": [
-    "dist/**"
+    "src",
+    "dist"
   ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
   "scripts": {
-    "build": "tsup src/index.tsx --format esm,cjs --dts --external react",
-    "dev": "tsup src/index.tsx --format esm,cjs --watch --dts --external react",
+    "codegen": "panda codegen --clean",
+    "build": "tsup src/index.ts --dts --format=esm,cjs --clean --dts --external @pandacss/dev --external @ui/style-system",
+    "dev": "pnpm build --watch",
     "lint": "eslint src/",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
@@ -22,7 +31,8 @@
     "react": "^18.1.0",
     "tsconfig": "workspace:*",
     "tsup": "^5.10.1",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "@pandacss/dev": "^0.15.0"
   },
   "publishConfig": {
     "access": "public"
