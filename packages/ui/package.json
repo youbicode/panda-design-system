@@ -22,7 +22,8 @@
     "build": "tsup src/index.ts --dts --format=esm,cjs --clean --dts --external @pandacss/dev --external @ui/styled-system",
     "dev": "pnpm build --watch",
     "lint": "eslint src/",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "ship": "panda ship src/**/*.tsx --outfile dist/panda.json"
   },
   "devDependencies": {
     "@types/react": "^18.0.9",

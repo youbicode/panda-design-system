@@ -7,6 +7,11 @@ export default defineConfig({
   // Files to exclude
   exclude: [],
 
+  // Useful for theme customization
+  theme: {
+    extend: {},
+  },
+
   // The ouput directory
   outdir: '@ui/styled-system',
   emitPackage: true,

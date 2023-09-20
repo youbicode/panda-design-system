@@ -7,7 +7,7 @@ const badge = cva({
   },
   variants: {
     visual: {
-      solid: { bg: 'red.200', color: 'black' },
+      solid: { bg: 'blue.200', color: 'black' },
       outline: { borderWidth: '1px', borderColor: 'red.200' },
     },
     size: {
